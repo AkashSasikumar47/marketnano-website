@@ -1,0 +1,334 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Martian Mono', monospace;
+  color: #444444;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #006aff;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-primary {
+  font-family: 'Syne', sans-serif;
+}
+
+.generate-btn {
+  display: flex;
+  width: 235px;
+  height: 55px;
+  padding: 13px 64px;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: radial-gradient(50% 50% at 50% 50%, #00bbff 0%, #006aff 100%);
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 80px;
+  padding: 20px 0;
+  z-index: 10;
+  position: relative;
+}
+
+#header .logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 32px;
+}
+
+@media (max-width: 768px) {
+  #header .logo h1 {
+    font-size: 28px;
+    padding: 8px 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: -80px;
+  z-index: 9;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+#hero h1 {
+  margin: 280px 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  line-height: 56px;
+  color: #000000
+}
+
+#hero h2 {
+  color: #000000a0;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 80px 0;
+}
+
+.section-bg {
+  background-color: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: #006aff;
+  bottom: 0;
+  left: calc(50% - 40px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+  font-style: italic;
+  color: #000000;
+}
+
+/*--------------------------------------------------------------
+# Why Us
+--------------------------------------------------------------*/
+.why-us {
+  padding-bottom: 30px;
+  padding: 32px;
+}
+
+.why-us .card {
+  border-radius: 30px;
+  border: 0;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.why-us .card-icon {
+  text-align: center;
+  margin-top: -32px;
+}
+
+.why-us .card-icon i {
+  font-size: 32px;
+  color: #fff;
+  width: 64px;
+  height: 64px;
+  padding-top: 10px;
+  text-align: center;
+  background-color: #006aff;
+  border-radius: 50%;
+  text-align: center;
+  border: 4px solid #fff;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.why-us .card-body {
+  padding-top: 12px;
+}
+
+.why-us .card-title {
+  font-weight: 700;
+  text-align: center;
+}
+
+.why-us .card-title a {
+  color: #000000;
+}
+
+.why-us .card-title a:hover {
+  color: #006aff;
+}
+
+.why-us .card-text {
+  color: #5e5e5e;
+}
+
+.why-us .card:hover .card-icon i {
+  background: #fff;
+  color: #006aff;
+}
+
+@media (max-width: 1024px) {
+  .why-us {
+    background-attachment: scroll;
+  }
+}
+
+/*--------------------------------------------------------------
+# Frequenty Asked Questions
+--------------------------------------------------------------*/
+.faq {
+  padding-bottom: 60px;
+}
+
+.faq .faq-list {
+  padding: 32px;
+  list-style: none;
+}
+
+.faq .faq-list li {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  color: #006aff;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+.faq .faq-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
+.faq .faq-list .icon-show {
+  display: none;
+}
+
+.faq .faq-list a.collapsed {
+  color: #000000;
+}
+
+.faq .faq-list a.collapsed:hover {
+  color: #000000;
+}
+
+.faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #ffffff;
+  padding: 80px 32px;
+  color: #000000;
+  font-size: 14px;
+}
+
+#footer .copyright {
+  text-align: center;
+}
